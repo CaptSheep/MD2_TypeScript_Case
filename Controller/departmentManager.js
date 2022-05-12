@@ -12,10 +12,9 @@ var DepartmentManager = /** @class */ (function () {
         this.departments.push(department);
     };
     DepartmentManager.prototype.findDepartment = function (id) {
-        var _this = this;
         var i = -1;
         this.departments.forEach(function (departments, index) {
-            if (_this.departments.id === id) {
+            if (departments.id === id) {
                 i = index;
             }
         });

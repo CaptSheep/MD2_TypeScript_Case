@@ -13,12 +13,13 @@ let departmentManager :any = new DepartmentManager();
 // global.windowVar.$('#table').DataTable();
 
 departmentManager.addDepartment(1,'Dao tao',10);
+departmentManager.updateDepartment(1,'Hanh chinh',20);
 employeeManager.addEmployee(1,1,'Tuan','Ha Noi',24,'tuan@gmail.com','01234');
 employeeManager.addEmployee(2,2,'Minh','Ha Noi',27,'minh@gmail.com','01234');
 employeeManager.updateEmployee(2,'Dat',18,'HaNoi','dat@gmail.com','0123');
 
-console.log(employeeManager);
-console.log(employeeManager.findEmployeeByDepartmentId(2))
+console.log(employeeManager.findEmployeeByDepartmentId(1));
+console.log(departmentManager)
 
 
 // $(document).ready(function () {

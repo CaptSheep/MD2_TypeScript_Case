@@ -12,7 +12,7 @@ export  class Department
     {
         this.name = name
     }
-    setNumberOfEmployee(numberOfEmployee : any)
+    setNumberOfEmployee(numberOfEmployee : number)
     {
         this.numberOfEmployee = numberOfEmployee;
     }
