@@ -23,10 +23,6 @@ export class DepartmentManager {
         return i;
     }
 
-    employeeOfDepartment(id: number) {
-
-    }
-
     updateDepartment(id: number, name: string, numberOfEmployee: number) {
         let departmentId = this.findDepartment(id);
         if (departmentId !== -1) {

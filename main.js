@@ -12,12 +12,16 @@ var departmentManager = new departmentManager_1.DepartmentManager();
 // global.windowVar.dt = require('./node_modules/datatables.net')();
 // global.windowVar.$('#table').DataTable();
 departmentManager.addDepartment(1, 'Dao tao', 10);
-departmentManager.updateDepartment(1, 'Hanh chinh', 20);
-employeeManager.addEmployee(1, 1, 'Tuan', 'Ha Noi', 24, 'tuan@gmail.com', '01234');
-employeeManager.addEmployee(2, 2, 'Minh', 'Ha Noi', 27, 'minh@gmail.com', '01234');
-employeeManager.updateEmployee(2, 'Dat', 18, 'HaNoi', 'dat@gmail.com', '0123');
+departmentManager.addDepartment(2, 'IT', 20);
+departmentManager.addDepartment(3, 'Dao tao', 20);
+employeeManager.addEmployee(1, 1, 'Long', 'Ha Noi', 23, 'long@gmail.com', '0123');
+employeeManager.addEmployee(2, 1, 'Dat', 'Thai Binh', 18, 'dat@gmail.com', '0123');
+employeeManager.addEmployee(3, 2, 'Dat', 'Thai Binh', 18, 'dat@gmail.com', '0123');
+employeeManager.updateEmployee(2, 'Trang', 29, 'Ha Noi', 'trang@gmail.com', '123');
+// employeeManager.deleteEmployee(3)
 console.log(employeeManager.findEmployeeByDepartmentId(1));
-console.log(departmentManager);
+// console.log(employeeManager.findEmployeeByDepartmentId(1));
+// console.log(departmentManager)
 // $(document).ready(function () {
 //     // let data = '';
 //     // employees.forEach((arr: any)=>{

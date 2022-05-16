@@ -20,8 +20,6 @@ var DepartmentManager = /** @class */ (function () {
         });
         return i;
     };
-    DepartmentManager.prototype.employeeOfDepartment = function (id) {
-    };
     DepartmentManager.prototype.updateDepartment = function (id, name, numberOfEmployee) {
         var departmentId = this.findDepartment(id);
         if (departmentId !== -1) {
