@@ -14,14 +14,15 @@ var departmentManager = new departmentManager_1.DepartmentManager();
 departmentManager.addDepartment(1, 'Dao tao', 10);
 departmentManager.addDepartment(2, 'IT', 20);
 departmentManager.addDepartment(3, 'Dao tao', 20);
+departmentManager.updateDepartment(3, 'Ke toan', 10);
 employeeManager.addEmployee(1, 1, 'Long', 'Ha Noi', 23, 'long@gmail.com', '0123');
+employeeManager.updateEmployee(1, 'Jackie', 'China', 30, 'jackie@gmail.com', '123');
 employeeManager.addEmployee(2, 1, 'Dat', 'Thai Binh', 18, 'dat@gmail.com', '0123');
-employeeManager.addEmployee(3, 2, 'Dat', 'Thai Binh', 18, 'dat@gmail.com', '0123');
-employeeManager.updateEmployee(2, 'Trang', 29, 'Ha Noi', 'trang@gmail.com', '123');
+employeeManager.addEmployee(3, 2, 'Minh', 'Noi', 22, 'minh@gmail.com', '0123');
 // employeeManager.deleteEmployee(3)
-console.log(employeeManager.findEmployeeByDepartmentId(1));
+console.log(employeeManager);
 // console.log(employeeManager.findEmployeeByDepartmentId(1));
-// console.log(departmentManager)
+console.log(departmentManager);
 // $(document).ready(function () {
 //     // let data = '';
 //     // employees.forEach((arr: any)=>{
