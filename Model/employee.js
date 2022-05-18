@@ -4,7 +4,7 @@ exports.Employee = void 0;
 var Employee = /** @class */ (function () {
     function Employee(id, departmentId, name, age, address, email, phone) {
         this.id = id;
-        this.departmentID = departmentId;
+        this.departmentId = departmentId;
         this.name = name;
         this.age = age;
         this.address = address;
@@ -13,6 +13,9 @@ var Employee = /** @class */ (function () {
     }
     Employee.prototype.setName = function (name) {
         this.name = name;
+    };
+    Employee.prototype.setDepartment = function (departmentId) {
+        this.departmentId = departmentId;
     };
     Employee.prototype.setAge = function (age) {
         this.age = age;

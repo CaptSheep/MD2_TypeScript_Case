@@ -7,18 +7,40 @@ export class EmployeeManager {
     }
 
     addEmployee(employeeId: number, departmentId:number , name: string, address: string, age: number, email: string, phone: string) {
-        let employee: Employee = new Employee(employeeId, departmentId, name, age, address, email, phone);
-        this.employees.push(employee);
+   
+        let check = false;
+        this.employees.forEach((item:any)=>{
+           if(item.id == employeeId){
+               check = true;
+           }
+        })
+
+         if (check) {
+           throw new Error("Cant Create Employee");
+         } else {
+           let employee: Employee = new Employee(
+             employeeId,
+             departmentId,
+             name,
+             age,
+             address,
+             email,
+             phone
+           );
+           this.employees.push(employee);
+         }
+
     }
 
     findEmployee(id: number) {
+
         let i = -1;
         this.employees.forEach((employees: any, index: number) => {
             if (employees.id == id) {
-                i = index;
+                i = index
             }
         })
-        return i
+        return i;
     }
     findEmployeeByDepartmentId(id:number)
     {
@@ -42,10 +64,14 @@ export class EmployeeManager {
 
     }
 
-    updateEmployee(id: number, name: string, age: number, address: string, email: string, phone: string) {
+    updateEmployee(id: number, departmentId:number , name: string, age: number, address: string, email: string, phone: string) {
         let updateEmployeeId = this.findEmployee(id)
+
+        console.log(updateEmployeeId);
+        
         if (updateEmployeeId !== -1) {
             this.employees[updateEmployeeId].setName(name);
+            this.employees[updateEmployeeId].setDepartment(departmentId)
             this.employees[updateEmployeeId].setAddress(address);
             this.employees[updateEmployeeId].setAge(age);
             this.employees[updateEmployeeId].setEmail(email);

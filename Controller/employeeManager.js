@@ -7,8 +7,19 @@ var EmployeeManager = /** @class */ (function () {
         this.employees = [];
     }
     EmployeeManager.prototype.addEmployee = function (employeeId, departmentId, name, address, age, email, phone) {
-        var employee = new employee_1.Employee(employeeId, departmentId, name, age, address, email, phone);
-        this.employees.push(employee);
+        var check = false;
+        this.employees.forEach(function (item) {
+            if (item.id == employeeId) {
+                check = true;
+            }
+        });
+        if (check) {
+            throw new Error("Cant Create Employee");
+        }
+        else {
+            var employee = new employee_1.Employee(employeeId, departmentId, name, age, address, email, phone);
+            this.employees.push(employee);
+        }
     };
     EmployeeManager.prototype.findEmployee = function (id) {
         var i = -1;
@@ -37,10 +48,12 @@ var EmployeeManager = /** @class */ (function () {
             throw new Error('Delete fail');
         }
     };
-    EmployeeManager.prototype.updateEmployee = function (id, name, age, address, email, phone) {
+    EmployeeManager.prototype.updateEmployee = function (id, departmentId, name, age, address, email, phone) {
         var updateEmployeeId = this.findEmployee(id);
+        console.log(updateEmployeeId);
         if (updateEmployeeId !== -1) {
             this.employees[updateEmployeeId].setName(name);
+            this.employees[updateEmployeeId].setDepartment(departmentId);
             this.employees[updateEmployeeId].setAddress(address);
             this.employees[updateEmployeeId].setAge(age);
             this.employees[updateEmployeeId].setEmail(email);

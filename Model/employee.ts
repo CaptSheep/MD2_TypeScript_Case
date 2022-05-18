@@ -1,8 +1,7 @@
 export class Employee {
     id: number
-    departmentID :number;
+    departmentId :number;
     name: string;
-
     age: number;
     address: string;
     email: string;
@@ -10,7 +9,7 @@ export class Employee {
 
     constructor(id: number, departmentId:number, name: string, age: number, address: string, email: string, phone: string) {
         this.id = id;
-        this.departmentID = departmentId
+        this.departmentId = departmentId
         this.name = name;
         this.age = age;
         this.address = address;
@@ -22,6 +21,10 @@ export class Employee {
         this.name = name;
     }
 
+    setDepartment(departmentId:number)
+    {
+        this.departmentId = departmentId
+    }
     setAge(age: number) {
         this.age = age;
     }
