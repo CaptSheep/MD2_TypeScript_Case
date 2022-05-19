@@ -53,7 +53,7 @@ export class DepartmentManager {
     deleteDepartment(id: number) {
         let departmentId = this.findDepartment(id);
         if (departmentId !== -1) {
-            this.employees.splice(departmentId, 1);
+            this.departments.splice(departmentId, 1);
         } else {
             throw new Error('Delete fail')
         }

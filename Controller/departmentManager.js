@@ -44,7 +44,12 @@ var DepartmentManager = /** @class */ (function () {
     };
     DepartmentManager.prototype.deleteDepartment = function (id) {
         var departmentId = this.findDepartment(id);
-        this.departments.splice(departmentId);
+        if (departmentId !== -1) {
+            this.employees.splice(departmentId, 1);
+        }
+        else {
+            throw new Error('Delete fail');
+        }
     };
     return DepartmentManager;
 }());

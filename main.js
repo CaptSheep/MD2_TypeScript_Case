@@ -16,15 +16,15 @@ departmentManager.addDepartment(1, 'Dao tao', 10);
 departmentManager.addDepartment(3, 'Tuyen sinh', 20);
 departmentManager.updateDepartment(3, 'Ke toan', 10);
 departmentManager.addDepartment(4, 'Hanh Chinh', 10);
-// departmentManager.deleteDepartment(1);
+departmentManager.deleteDepartment(1);
 employeeManager.addEmployee(1, 1, 'Long', 'Ha Noi', 23, 'long@gmail.com', '0123');
 employeeManager.updateEmployee(1, 1, 'Jackie', 30, 'China', 'jackie@gmail.com', '123');
 employeeManager.addEmployee(2, 1, 'Dat', 'Thai Binh', 18, 'dat@gmail.com', '0123');
 employeeManager.addEmployee(3, 2, 'Minh', 'Noi', 22, 'minh@gmail.com', '0123');
 employeeManager.deleteEmployee(2);
-console.log(employeeManager);
+// console.log(employeeManager);
 // console.log(employeeManager.findEmployeeByDepartmentId(1));
-// console.log(departmentManager)
+console.log(departmentManager);
 // $(document).ready(function () {
 //     // let data = '';
 //     // employees.forEach((arr: any)=>{
