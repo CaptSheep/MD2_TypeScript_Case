@@ -8,8 +8,19 @@ var DepartmentManager = /** @class */ (function () {
         this.departments = [];
     }
     DepartmentManager.prototype.addDepartment = function (id, name, numberOfEmployee) {
-        var department = new department_1.Department(id, name, numberOfEmployee);
-        this.departments.push(department);
+        var check = false;
+        this.departments.forEach(function (item) {
+            if (item.id === id) {
+                check = true;
+            }
+        });
+        if (check) {
+            throw new Error('Can not Create Department');
+        }
+        else {
+            var department = new department_1.Department(id, name, numberOfEmployee);
+            this.departments.push(department);
+        }
     };
     DepartmentManager.prototype.findDepartment = function (id) {
         var i = -1;

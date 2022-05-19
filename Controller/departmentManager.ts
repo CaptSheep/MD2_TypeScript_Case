@@ -9,10 +9,24 @@ export class DepartmentManager {
     }
 
     addDepartment(id: number, name: string, numberOfEmployee: number,) {
-        let department: Department = new Department(id, name, numberOfEmployee)
+        let check = false;
+        this.departments.forEach((item : any)=>{
+            if(item.id === id)
+            {
+                check = true
+            }
+        })
+        if(check)
+        {
+            throw new Error('Can not Create Department')
+        }
+        else
+        {
+             let department: Department = new Department(id, name, numberOfEmployee)
         this.departments.push(department)
+        }
+    
     }
-
     findDepartment(id: number) {
         let i = -1;
         this.departments.forEach((departments: any, index: number) => {
@@ -38,6 +52,11 @@ export class DepartmentManager {
 
     deleteDepartment(id: number) {
         let departmentId = this.findDepartment(id);
-        this.departments.splice(departmentId);
+        if (departmentId !== -1) {
+            this.employees.splice(departmentId, 1);
+        } else {
+            throw new Error('Delete fail')
+        }
     }
+
 }

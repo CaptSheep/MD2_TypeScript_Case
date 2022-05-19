@@ -67,7 +67,7 @@ export class EmployeeManager {
     updateEmployee(id: number, departmentId:number , name: string, age: number, address: string, email: string, phone: string) {
         let updateEmployeeId = this.findEmployee(id)
 
-        console.log(updateEmployeeId);
+    
         
         if (updateEmployeeId !== -1) {
             this.employees[updateEmployeeId].setName(name);

@@ -50,7 +50,6 @@ var EmployeeManager = /** @class */ (function () {
     };
     EmployeeManager.prototype.updateEmployee = function (id, departmentId, name, age, address, email, phone) {
         var updateEmployeeId = this.findEmployee(id);
-        console.log(updateEmployeeId);
         if (updateEmployeeId !== -1) {
             this.employees[updateEmployeeId].setName(name);
             this.employees[updateEmployeeId].setDepartment(departmentId);
